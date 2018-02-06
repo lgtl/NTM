@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkFrame" id="main">
+    <property name="visible">True</property>
+    <property name="label_xalign">0</property>
+    <property name="shadow_type">none</property>
+    <child>
+      <object class="GtkAlignment" id="timeSlotFrame_alignment">
+        <property name="visible">True</property>
+        <property name="left_padding">8</property>
+        <property name="right_padding">2</property>
+        <child>
+          <object class="GtkVBox" id="timeSlotFrame_vbox">
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkTable" id="timeSlotFrame_table">
+                <property name="visible">True</property>
+                <property name="n_rows">3</property>
+                <property name="n_columns">4</property>
+                <child>
+                  <object class="GtkLabel" id="label1">
+                    <property name="visible">True</property>
+                    <property name="xpad">2</property>
+                    <property name="ypad">2</property>
+                    <property name="label" translatable="yes">&lt;small&gt;&lt;i&gt;Slots&lt;/i&gt;&lt;/small&gt;</property>
+                    <property name="use_markup">True</property>
+                  </object>
+                  <packing>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="x_options"></property>
+                    <property name="y_options"></property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label2">
+                    <property name="visible">True</property>
+                    <property name="xpad">2</property>
+                    <property name="ypad">2</property>
+                    <property name="label" translatable="yes">&lt;span color='#900000'&gt;&lt;small&gt;&lt;i&gt;Used&lt;/i&gt;&lt;/small&gt;&lt;/span&gt;</property>
+                    <property name="use_markup">True</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="x_options">GTK_EXPAND</property>
+                    <property name="y_options"></property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label4">
+                    <property name="visible">True</property>
+                    <property name="xpad">2</property>
+                    <property name="ypad">2</property>
+                    <property name="label" translatable="yes">&lt;small&gt;&lt;i&gt;This Slot&lt;/i&gt;&lt;/small&gt;</property>
+                    <property name="use_markup">True</property>
+                  </object>
+                  <packing>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                    <property name="x_options"></property>
+                    <property name="y_options"></property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label5">
+                    <property name="visible">True</property>
+                    <property name="xpad">2</property>
+                    <property name="ypad">2</property>
+                    <property name="label" translatable="yes">&lt;span color='#009000'&gt;&lt;small&gt;&lt;i&gt;Left&lt;/i&gt;&lt;/small&gt;&lt;/span&gt;</property>
+                    <property name="use_markup">True</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="x_options">GTK_EXPAND</property>
+                    <property name="y_options"></property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label6">
+                    <property name="visible">True</property>
+                    <property name="xpad">2</property>
+                    <property name="ypad">2</property>
+                    <property name="label" translatable="yes">&lt;small&gt;&lt;i&gt;Total&lt;/i&gt;&lt;/small&gt;</property>
+                    <property name="use_markup">True</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">3</property>
+                    <property name="right_attach">4</property>
+                    <property name="x_options">GTK_EXPAND</property>
+                    <property name="y_options"></property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label7">
+                    <property name="visible">True</property>
+                    <property name="xpad">2</property>
+                    <property name="ypad">2</property>
+                    <property name="use_markup">True</property>
+                  </object>
+                  <packing>
+                    <property name="x_options"></property>
+                    <property name="y_options"></property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_slots_used">
+                    <property name="visible">True</property>
+                    <property name="xpad">2</property>
+                    <property name="ypad">2</property>
+                    <property name="label" translatable="yes">189</property>
+                    <attributes>
+                      <attribute name="foreground" value="#909000000000"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="x_options"></property>
+                    <property name="y_options"></property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_slots_left">
+                    <property name="visible">True</property>
+                    <property name="xpad">2</property>
+                    <property name="ypad">2</property>
+                    <property name="label" translatable="yes">11</property>
+                    <attributes>
+                      <attribute name="foreground" value="#000090900000"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="x_options"></property>
+                    <property name="y_options"></property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_slots_total">
+                    <property name="visible">True</property>
+                    <property name="xpad">2</property>
+                    <property name="ypad">2</property>
+                    <property name="label" translatable="yes">200</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">3</property>
+                    <property name="right_attach">4</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="x_options"></property>
+                    <property name="y_options"></property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_thisSlot_timeUsed">
+                    <property name="visible">True</property>
+                    <property name="xpad">2</property>
+                    <property name="ypad">2</property>
+                    <property name="label" translatable="yes">4'15"</property>
+                    <attributes>
+                      <attribute name="foreground" value="#909000000000"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                    <property name="x_options"></property>
+                    <property name="y_options"></property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_thisSlot_timeLeft">
+                    <property name="visible">True</property>
+                    <property name="xpad">2</property>
+                    <property name="ypad">2</property>
+                    <property name="label" translatable="yes">10'45"</property>
+                    <attributes>
+                      <attribute name="foreground" value="#000090900000"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                    <property name="x_options"></property>
+                    <property name="y_options"></property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_thisSlot_timeTotal">
+                    <property name="visible">True</property>
+                    <property name="xpad">2</property>
+                    <property name="ypad">2</property>
+                    <property name="label" translatable="yes">15'</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">3</property>
+                    <property name="right_attach">4</property>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                    <property name="x_options"></property>
+                    <property name="y_options"></property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="timeSlotFrame_period">
+                <property name="visible">True</property>
+                <property name="tooltip_markup">Period</property>
+                <property name="xalign">0</property>
+                <property name="label" translatable="yes">&lt;small&gt;&lt;small&gt;Period: 2009-09-19 - 2009-10-18&lt;/small&gt;&lt;/small&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child type="label">
+      <object class="GtkHBox" id="hbox2">
+        <property name="visible">True</property>
+        <property name="spacing">4</property>
+        <child>
+          <object class="GtkLabel" id="timeSlot_topLabel">
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">&lt;b&gt;Time Slot&lt;/b&gt;</property>
+            <property name="use_markup">True</property>
+          </object>
+          <packing>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="timeSlot_topLabel2">
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">&lt;small&gt;(30.3%)&lt;/small&gt;</property>
+            <property name="use_markup">True</property>
+          </object>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkDialog" id="date_dialog">
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">NTM - Date Choice</property>
+    <property name="modal">True</property>
+    <property name="type_hint">normal</property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox1">
+        <property name="visible">True</property>
+        <property name="spacing">2</property>
+        <child>
+          <object class="GtkVBox" id="vbox1">
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkLabel" id="date_dialog_title">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">&lt;b&gt;First Day&lt;/b&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCalendar" id="date_dialog_calendar">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="year">2009</property>
+                <property name="month">7</property>
+                <property name="day">1</property>
+                <property name="show_week_numbers">True</property>
+              </object>
+              <packing>
+                <property name="padding">4</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area1">
+            <property name="visible">True</property>
+            <property name="layout_style">end</property>
+            <child>
+              <object class="GtkButton" id="date_dialog_cancelButton">
+                <property name="label">gtk-cancel</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="date_dialog_okButton">
+                <property name="label">gtk-ok</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="0">date_dialog_cancelButton</action-widget>
+      <action-widget response="1">date_dialog_okButton</action-widget>
+    </action-widgets>
+  </object>
+  <object class="GtkFrame" id="preferences">
+    <property name="visible">True</property>
+    <property name="label_xalign">0</property>
+    <property name="shadow_type">none</property>
+    <child>
+      <object class="GtkAlignment" id="alignment1">
+        <property name="visible">True</property>
+        <property name="left_padding">4</property>
+        <child>
+          <object class="GtkVBox" id="pref_vbox">
+            <property name="visible">True</property>
+            <property name="spacing">2</property>
+            <child>
+              <object class="GtkHSeparator" id="pref_hseparator3">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="padding">4</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHBox" id="pref_hbox7">
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkImage" id="pref_image5">
+                    <property name="visible">True</property>
+                    <property name="icon_name">gtk-apply</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="pref_timeSlot_active">
+                    <property name="label" translatable="yes">Active</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">False</property>
+                    <property name="active">True</property>
+                    <property name="draw_indicator">True</property>
+                  </object>
+                  <packing>
+                    <property name="padding">4</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHSeparator" id="pref_hseparator9">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="padding">4</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHBox" id="pref_hbox1">
+                <property name="visible">True</property>
+                <property name="spacing">4</property>
+                <child>
+                  <object class="GtkImage" id="pref_image1">
+                    <property name="visible">True</property>
+                    <property name="icon_name">list-add</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="pref_label5">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Total Slots :</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="padding">2</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkSpinButton" id="pref_totalSlots">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="max_length">6</property>
+                    <property name="invisible_char">●</property>
+                    <property name="climb_rate">1</property>
+                    <property name="numeric">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHSeparator" id="pref_hseparator7">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="padding">4</property>
+                <property name="position">4</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHBox" id="pref_hbox10">
+                <property name="visible">True</property>
+                <property name="spacing">4</property>
+                <child>
+                  <object class="GtkImage" id="pref_image7">
+                    <property name="visible">True</property>
+                    <property name="icon_name">list-add</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="pref_label10">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Slot lenght [min.] :</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="padding">2</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkSpinButton" id="pref_slotLength">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="max_length">6</property>
+                    <property name="invisible_char">●</property>
+                    <property name="climb_rate">1</property>
+                    <property name="numeric">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">5</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHSeparator" id="pref_hseparator10">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="padding">4</property>
+                <property name="position">6</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHBox" id="pref_hbox5">
+                <property name="visible">True</property>
+                <property name="spacing">4</property>
+                <child>
+                  <object class="GtkImage" id="pref_image3">
+                    <property name="visible">True</property>
+                    <property name="icon_name">gtk-stop</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="pref_auto_disconnect">
+                    <property name="label" translatable="yes">Auto Disconnect</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">False</property>
+                    <property name="draw_indicator">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">7</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHSeparator" id="pref_hseparator1">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="padding">4</property>
+                <property name="position">8</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHBox" id="pref_hbox12">
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkImage" id="pref_image9">
+                    <property name="visible">True</property>
+                    <property name="icon_name">list-add</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="pref_label12">
+                    <property name="visible">True</property>
+                    <property name="xpad">4</property>
+                    <property name="label" translatable="yes">Period</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="padding">2</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="pref_period_autoupdate">
+                    <property name="label" translatable="yes">Auto update</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">False</property>
+                    <property name="draw_indicator">True</property>
+                  </object>
+                  <packing>
+                    <property name="fill">False</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">9</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkAlignment" id="alignment2">
+                <property name="visible">True</property>
+                <property name="left_padding">8</property>
+                <child>
+                  <object class="GtkTable" id="pref_table2">
+                    <property name="visible">True</property>
+                    <property name="n_rows">3</property>
+                    <property name="n_columns">2</property>
+                    <property name="column_spacing">4</property>
+                    <property name="row_spacing">2</property>
+                    <child>
+                      <object class="GtkLabel" id="pref_label1">
+                        <property name="visible">True</property>
+                        <property name="xalign">1</property>
+                        <property name="label" translatable="yes">Length :</property>
+                        <property name="justify">right</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkComboBox" id="pref_period_length">
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="pref_label2">
+                        <property name="visible">True</property>
+                        <property name="xalign">1</property>
+                        <property name="label" translatable="yes">First day :</property>
+                        <property name="justify">right</property>
+                      </object>
+                      <packing>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="pref_label_days">
+                        <property name="visible">True</property>
+                        <property name="xalign">1</property>
+                        <property name="label" translatable="yes">Days :</property>
+                        <property name="justify">right</property>
+                      </object>
+                      <packing>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="pref_first_day">
+                        <property name="label" translatable="yes">2009.10.20</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="relief">none</property>
+                        <property name="xalign">0.10000000149011612</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkSpinButton" id="pref_days">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="max_length">6</property>
+                        <property name="invisible_char">●</property>
+                        <property name="climb_rate">1</property>
+                        <property name="numeric">True</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">10</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHSeparator" id="pref_hseparator11">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="padding">4</property>
+                <property name="position">11</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child type="label">
+      <object class="GtkLabel" id="title">
+        <property name="visible">True</property>
+        <property name="label" translatable="yes">&lt;b&gt;Time Slot Preferences&lt;/b&gt;</property>
+        <property name="use_markup">True</property>
+      </object>
+    </child>
+  </object>
+</interface>

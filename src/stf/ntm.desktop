@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=NTM
+Version=1.0.5
+Encoding=UTF-8
+Comment=Network Traffic Monitor
+Exec=ntm
+Icon=ntm.svg
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Application;Network;
+Comment[en_US.UTF-8]=Monitors your internet traffic
+GenericName[en_US.UTF-8]=1.0 (Drunken Monkey)
+
